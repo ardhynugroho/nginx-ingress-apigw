@@ -1,7 +1,6 @@
 # Task 00: Preparing The Lab Environment
-Do these inside microk8s-1 node
 
-## Steps
+## Steps @ microk8s-1 !!!
 
 1.
 ```
