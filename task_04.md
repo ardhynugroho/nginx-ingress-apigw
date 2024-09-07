@@ -6,7 +6,15 @@ Test add new job
 curl -k -X POST -H "Content-Type: application/json"  -d '["Professional Skateboarder"]' https://jobs.local/add-job | jq
 ```
 
-You can see new job "Preofessional Skateboarder" was added
+You can see new job "Professional Skateboarder" was added
+
+Now put some bad job information
+
+```
+curl -k -X POST -H "Content-Type: application/json"  -d '[42, true]' https://jobs.local/add-job | jq
+```
+
+You can see bad job name was added. We need OpenAPI validation to protect the API from bad payload.
 
 ## Steps
 
