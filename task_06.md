@@ -25,6 +25,8 @@ k6 run k6-jobs.js --insecure-skip-tls-verify
 
 Run result:
 
+You can see request rate is not limited: `http_reqs......................: 24353   811.589748/s`
+
 ```
 
           /\      |‾‾| /‾‾/   /‾‾/
@@ -65,8 +67,6 @@ Run result:
 running (0m30.0s), 00/10 VUs, 24353 complete and 0 interrupted iterations
 default ✓ [======================================] 10 VUs  30s
 ```
-
-You can see request rate is: `http_reqs......................: 24353   811.589748/s`
 
 ## Steps @ microk8s-1 !!!
 
@@ -126,6 +126,8 @@ k6 run k6-jobs.js --insecure-skip-tls-verify
 ```
 Run result:
 
+You can see request rate was limited: `http_reqs......................: 249    8.002752/s`
+
 ```
 
           /\      |‾‾| /‾‾/   /‾‾/
@@ -167,5 +169,3 @@ Run result:
 running (0m31.1s), 00/10 VUs, 249 complete and 0 interrupted iterations
 default ✓ [======================================] 10 VUs  30s
 ```
-
-You can see request rate was limited: `http_reqs......................: 249    8.002752/s`
