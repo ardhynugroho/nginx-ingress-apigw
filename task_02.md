@@ -14,7 +14,7 @@ cd ../task_02
 ```
 The working directory should be: `/home/ubuntu/nginx-api-gateway-for-k8s/task_02`
 
-2.
+2. Create SSL certificate to enable HTTPS
 ```
 openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout jobs.local.key -out jobs.local.crt -config openssl.cnf -extensions req_ext
 ```
