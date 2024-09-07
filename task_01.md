@@ -5,7 +5,7 @@
 |http://jobs.local:30020|http://eclectic-job:3000|
 |http://jobs.local:30010|http://myapp:3000|
 
-## Steps @ microk8s-1 !!!
+## Steps
 
 1.
 ```
