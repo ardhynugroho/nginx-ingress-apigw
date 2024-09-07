@@ -1,1 +1,2 @@
-# Copy-Paste Guide: NGINX ingress controller as API Gateway
+# Copy-Paste Lab.Guide: 
+# NGINX Ingress Controller As API Gateway
