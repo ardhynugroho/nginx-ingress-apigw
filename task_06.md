@@ -1,6 +1,6 @@
 # Task 06: API Request Rate-Limiting
 
-
+Limiting user request rate using Authorization token as identification
 
 ## Steps @ jumphost !!!
 
@@ -80,7 +80,7 @@ cd ../task_06
 k apply -f rate-limit-policy.yaml
 ```
 
-6. Verify that rate limit policy configured at 10 rps
+6. Verify that rate limit policy configured at 10 rps and `${http_authorization}` used as client identification
 
 ```
 k describe policy rate-limit-policy
@@ -94,7 +94,7 @@ Namespace:    default
 
 Spec:
   Rate Limit:
-    Key:          ${http_authorization}
+    Key:          ${http_authorization}      <<<===
     Rate:         10r/s      <<<===
     Reject Code:  429
     Zone Size:    10M
