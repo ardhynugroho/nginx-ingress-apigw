@@ -86,20 +86,24 @@ k apply -f VirtualServer.yaml
 
 ## Result
 
-Payload not conform with OpenAPI spec will be rejected with support ID
+Create request with bad payload
 
 ```
 $ curl -k -X POST -H "Content-Type: application/json"  -d '[42, true]' https://jobs.local/add-job | jq
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-100    47  100    37  100    10   1473    398 --:--:-- --:--:-- --:--:--  1958
+```
+
+Request is rejected with support ID
+
+```
 {
   "supportID": "4428710366475055126"
 }
 ```
 
-Payload that conform the spec. is allowed
+Now create request with good payload
 
 ```
 curl -k -X POST -H "Content-Type: application/json"  -d '["OpenAPI Spec Enforcer"]' https://jobs.local/add-job | jq
 ```
+
+You can see new job was added
