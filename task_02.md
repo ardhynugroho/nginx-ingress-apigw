@@ -19,6 +19,36 @@ The working directory should be: `/home/ubuntu/nginx-api-gateway-for-k8s/task_02
 openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout jobs.local.key -out jobs.local.crt -config openssl.cnf -extensions req_ext
 ```
 
+<details>
+  <summary>openssl.cnf file</summary>
+
+```
+[req]
+default_bits = 2048
+prompt = no
+default_md = sha256
+req_extensions = req_ext
+distinguished_name = dn
+
+[dn]
+C=US
+ST=New York
+L=New York
+O=Local Development
+OU=IT
+emailAddress=example@example.com
+CN = jobs.local
+
+[req_ext]
+subjectAltName = @alt_names
+
+[alt_names]
+DNS.1 = jobs.local
+DNS.2 = www.jobs.local
+```
+
+</details>
+
 3.
 ```
 kubectl create secret tls jobs-local-tls --key jobs.local.key --cert jobs.local.crt
