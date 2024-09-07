@@ -6,7 +6,7 @@
 |https://jobs.local/add-job|http://eclectic-jobs:3000/add-job|
 
 
-## Steps @ microk8s-1 !!!
+## Steps
 
 1.
 ```
