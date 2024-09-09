@@ -22,7 +22,7 @@ microk8s-status.sh
 ```
 test-dns.sh
 ```
-you might terminate with c-c
+you might terminate with Ctl-c
 
 6.
 ```
