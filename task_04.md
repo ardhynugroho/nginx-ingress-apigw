@@ -89,7 +89,7 @@ k apply -f VirtualServer.yaml
 Create request with bad payload
 
 ```
-$ curl -k -X POST -H "Content-Type: application/json"  -d '[42, true]' https://jobs.local/add-job | jq
+curl -k -X POST -H "Content-Type: application/json"  -d '[42, true]' https://jobs.local/add-job | jq
 ```
 
 Request is rejected with support ID
